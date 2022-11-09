@@ -15,14 +15,15 @@ header {
 
 .shortcut {
     height: 50%;
-    /* background-color: #BDCBD2; */
+    /* background-color: #f4f4f4; */
+
 }
 
 nav {
     position: relative;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     height: 50%;
     background-color:white;
     /* background-color: red; */
@@ -68,20 +69,39 @@ nav {
 }
 
 .search {
+    /* margin: auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     box-sizing: border-box;
     width: 33%;
     height: 100%;
     padding: 20px;
     border-radius: 20px;
-    background-color: #f4f4f4;
+    border: 2px solid #f4f4f4;
+    /* background-color: #f4f4f4; */
+}
+
+.search .search-focused {
+    width: 100%;
+    padding: 0px;
+}
+
+
+.search .search-text {
+    /* line-height: 50px; */
+    width: 80%;
+    padding: 10px;
+    border: 0;
 }
 
 .search input {
-     width: 80%;
+    
+
 }
 
 .body {
-    
     height: 1200px;
     /* background-color: aquamarine; */
 }
@@ -94,7 +114,7 @@ nav {
 
 .container .left {
     width: 200px;
-    /* background-color: #dfe5e9; */
+    background-color: #f4f4f4;
 
 }
 .container .mid {
@@ -144,22 +164,34 @@ nav {
     box-sizing: border-box;
     border-radius: 20px;
     border: 1px solid #fff;
+    /* box-shadow: 10px 10px 10px rgba(0, 0, 0, .2); */
+
     /* box-shadow: 0 5px 202px rgb(0, 0, 0); */
     background-color: #f4f4f4;
-   
-
-
     transition: 0.5s;
 }
 
 .recommend-items .card:hover {
     background-color: #FFF;
     /* border-color: #B2BFC3; */
-    transform: rotateZ(1deg);
+    /* transform: rotateZ(1deg); */
     /* transform: rotate3d(1deg,1deg,0); */
-    
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, .2);
+    animation: shake 2s ease-in-out infinite;
+    border: 3px solid #f4f4f4;
+}
 
-    box-shadow: 0 5px 50px 10px rgb(46, 53, 53);
+
+@keyframes shake { 
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
 }
 
 .recommend-items .card .items-link {
@@ -204,8 +236,7 @@ nav {
 
 .container .right {
     width: 200px;
-    /* background-color: #dfe5e9; */
-
+    background-color: #f4f4f4;
 }
 
 .right aside {
